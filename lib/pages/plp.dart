@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import '../solutions.dart';
 
 void main() {
   runApp(MyApp());
@@ -236,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Text(
-                                  'Data Collection Phase',
+                                  'Planning Phase',
                                   style: TextStyle(
                                     fontSize: 30,
                                   ),
@@ -259,43 +260,15 @@ class _HomePageState extends State<HomePage> {
                             )),
 
                         Container(
-                          width: double.infinity,
-                          child: Text('Responses', style: TextStyle(fontSize: 22), textAlign: TextAlign.left,),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 60,
-                                width: 120,
-                                color: Colors.green,
-                                child: Text(
-                                  'Survey', style: TextStyle(fontSize: 20),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                              Container(
-                                height: 60,
-                                width: 120,
-                                color: Colors.green,
-                                child: Text(
-                                  'Environmental Organization', style: TextStyle(fontSize: 15),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                              Container(
-                                height: 60,
-                                width: 120,
-                                color: Colors.green,
-                                child: Text(
-                                  'Government Schemes', style: TextStyle(fontSize: 15),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ],
-                          ),
+                          child: SolutionCard(),
                         )
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        //   children: [
+                        //     SolutionCard(title: 'Teachers', subtitle: 'Students'),
+                        //     SolutionCard(title: 'Teachers', subtitle: 'Students'),
+                        //   ],
+                        // )
                       ],
                     ),
                   ))),
