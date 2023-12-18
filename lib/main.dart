@@ -61,35 +61,19 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromARGB(255, 158, 245, 161),
         elevation: 4.0,
         automaticallyImplyLeading: false,
-        title: Text(
-          'EcoSync',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+        title: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Text(
+            'EcoSync',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () {}, // Replace with login function
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 50, 177, 99),
-                shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(10), // Remove border radius
-                ),
-              ),
-              child: Text(
-                'Login',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16.0,
-                ),
-              ),
-            ),
-          ),
+          
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: ElevatedButton(
@@ -102,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               child: Text(
-                'Sign Up',
+                'Log Out',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.0,
@@ -164,7 +148,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         LargeLabel(text: 'RGIPT, Jais'), //Add the label
-
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [

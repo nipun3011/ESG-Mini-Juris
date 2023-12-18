@@ -37,6 +37,24 @@ class _SolutionCardState extends State<SolutionCard> {
       if (_currentIndex == 0) {
         return [
           Row(
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(0),
+                ),
+                onPressed: () {
+                  states[_currentIndex] = 0; // Activate index 0
+                  _currentIndex = -1; // Update current index
+                  super.setState(() {}); //
+                },
+                child: Icon(
+                  Icons.arrow_circle_left,
+                  size: 50,
+                ),
+              ),
+            ],
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
@@ -48,84 +66,365 @@ class _SolutionCardState extends State<SolutionCard> {
                     border: Border.all(width: 3)),
                 child: SingleChildScrollView(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     //Teachers list
                     children: [
                       Text(
-                        
                         'Faculty',
                         style: TextStyle(
-                          fontSize: 30,
-                          backgroundColor: Colors.lightBlue[300],
+                          fontSize: 40,
                         ),
                       ),
-                      Text('Mr. Anubhav Singh'),
-                      Text('Mrs. Rekha Bakshi'),
-                      Text('Mr. Koushik Yadav'),
-                      Text('Mrs. Kanishka Singhal'),
+                      Text(
+                        'Mr. Anubhav Singh',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Mrs. Rekha Bakshi',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Mr. Koushik Yadav',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Mrs. Kanishka Singhal',
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ],
                   ),
                 ),
               ),
               Container(
-                  width: 400,
-                  height: 300,
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 220, 220, 220),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 3)),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      //Teachers list
-                      children: [
-                        Text(
-                          'Students',
-                          style: TextStyle(
-                              fontSize: 30,
-                              backgroundColor: Colors.lightBlue[300]),
+                width: 400,
+                height: 300,
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 220, 220, 220),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(width: 3)),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                    //Teachers list
+                    children: [
+                      Text(
+                        'Students',
+                        style: TextStyle(
+                          fontSize: 40,
                         ),
-                        Text('Aditya Vishwakarma'),
-                        Text('Sandeep Hooda'),
-                        Text('Radhika Goel'),
-                        Text('Harshita Sharma'),
-                        Text('Piyush Tiwari'),
-                        Text('Junaid Khan'),
-                        Text('Shreya Mittal'),
-                        Text('Kanchan Sahu'),
-                        Text('Sarth Karki'),
-                        Text('Aman Kumar'),
-                        Text('Junaid Khan'),
-                        Text('Shreya Mittal'),
-                        Text('Kanchan Sahu'),
-                        Text('Sarth Karki'),
-                        Text('Aman Kumar'),
-                      ],
-                    ),
-                  ))
-            ],
-          ),
-          Column(
-            children: [
-              Text(
-                'Habitual Solutions',
-                style: TextStyle(
-                    fontSize: 30, backgroundColor: Colors.lightBlue[300]),
-              )
-            ],
-          ),
-          Column(
-            children: [
-              Text(
-                'Infrastructural Solutions',
-                style: TextStyle(
-                    fontSize: 30, backgroundColor: Colors.lightBlue[300]),
+                      ),
+                      Text(
+                        'Aditya Vishwakarma',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Sandeep Hooda',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Radhika Goel',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Harshita Sharma',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Piyush Tiwari',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Junaid Khan',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Shreya Mittal',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Kanchan Sahu',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Sarth Karki',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Aman Kumar',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Aditya Vishwakarma',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Sandeep Hooda',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Radhika Goel',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Harshita Sharma',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Piyush Tiwari',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Junaid Khan',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Shreya Mittal',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Kanchan Sahu',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Sarth Karki',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text(
+                        'Aman Kumar',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              Text(
-                  "Fix leaks promptly by regularly checking and repairing faucets and pipes")
             ],
-          )
-          // Your widgets for condition 0
+          ),
+          SizedBox(
+            height: 60,
+          ),
+          Container(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlue[300],
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        child: Text(
+                          'Habitual Solutions',
+                          style: TextStyle(
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        width: 500,
+                        margin: EdgeInsets.all(10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        child: Text(
+                          'Reduce water flow without compromising usability',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        width: 500,
+                        margin: EdgeInsets.all(10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        child: Text(
+                          'Regularly check and repair leaky faucets and pipes',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        width: 500,
+                        margin: EdgeInsets.all(10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        child: Text(
+                          'Redirect used water from sinks for flushing toilets',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        width: 500,
+                        margin: EdgeInsets.all(10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        child: Text(
+                          'Sweep driveways and sidewalks instead of using a hose',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 50,
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Alert the students',
+                          style: TextStyle(),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlue[300],
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        child: Text(
+                          'Infrastructural Solutions',
+                          style: TextStyle(
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        width: 600,
+                        margin: EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {}, // Replace with login function
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(0, 50, 177, 99),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            "Fix leaks promptly by regularly checking and repairing faucets and pipes",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 600,
+                        margin: EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {}, // Replace with login function
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(0, 50, 177, 99),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            "Integrate green roofs and permeable surfaces for natural water absorption",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 600,
+                        margin: EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {}, // Replace with login function
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(0, 50, 177, 99),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            "Implement systems to collect and store rainwater for non-drinking purposes",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 600,
+                        margin: EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {}, // Replace with login function
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(0, 50, 177, 99),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            "Invest in technology that optimizes watering based on weather data",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 40,
+                  )
+                ],
+              )) // Your widgets for condition 0
         ];
       } else if (_currentIndex == 1) {
         return [
